@@ -5,6 +5,9 @@
 upload the data from the in a directory called dataIOT
 run main
 
+# to load pretrained:
+model = keras.models.load_model('walk_run_model.mdl')
+
 # to test:
 predictions = model.predict(np.array([data_samples[0]]))
 predicted_labels = ['walking' if pred < 0.5 else 'running' for pred in predictions]
